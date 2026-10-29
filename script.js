@@ -116,7 +116,6 @@ function researchMessage() {
   text += line("عدد الصفحات", val("pages"));
   text += line("اللغة", radio("resLang"));
 
-  text += section("بيانات الغلاف", `الاسم: ${val("resStudent")}\nالموضوع: ${val("resTopic")}`);
   return text;
 }
 

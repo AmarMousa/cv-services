@@ -279,12 +279,86 @@
           </div>
         </template>
 
-        <label id="pagesField" hidden>عدد الصفحات
-          <input type="number" id="pages" min="1" placeholder="مثلاً 10">
-        </label>
+        <!-- بيانات البريزنتيشن -->
+        <div class="cv-data" id="presFields" hidden>
+          <h3 class="cv-title">بيانات البريزنتيشن</h3>
+          <fieldset>
+            <legend>تفاصيل البريزنتيشن</legend>
+            <label>موضوع البريزنتيشن *
+              <input type="text" id="presTopic" data-required placeholder="مثلاً: الطاقة المتجددة">
+            </label>
+            <div class="field">
+              <span class="field-label">اللغة *</span>
+              <div class="checks">
+                <label><input type="radio" name="presLang" value="عربي" checked> عربي</label>
+                <label><input type="radio" name="presLang" value="إنجليزي"> إنجليزي</label>
+              </div>
+            </div>
+            <div class="grid-2">
+              <label>عدد الشرائح (السلايدات) تقريبًا
+                <input type="number" id="presSlides" min="1" placeholder="مثلاً 12">
+              </label>
+              <label>هيتعرض فين؟
+                <input type="text" id="presFor" placeholder="مثلاً: الجامعة، شغل، مؤتمر">
+              </label>
+            </div>
+            <label>البيانات اللي تتكتب في أول سلايد
+              <textarea id="presCover" rows="3" placeholder="الاسم، الجامعة/الكلية، المادة، اسم الدكتور..."></textarea>
+            </label>
+          </fieldset>
+        </div>
+
+        <!-- بيانات البحث -->
+        <div class="cv-data" id="researchFields" hidden>
+          <h3 class="cv-title">بيانات البحث</h3>
+          <fieldset>
+            <legend>تفاصيل البحث</legend>
+            <label>عنوان / موضوع البحث *
+              <input type="text" id="resTopic" data-required placeholder="مثلاً: تلوث المياه وطرق معالجته">
+            </label>
+            <div class="grid-2">
+              <label>عدد الصفحات *
+                <input type="number" id="pages" min="1" data-required placeholder="مثلاً 10">
+              </label>
+              <div class="field">
+                <span class="field-label">اللغة *</span>
+                <div class="checks">
+                  <label><input type="radio" name="resLang" value="عربي" checked> عربي</label>
+                  <label><input type="radio" name="resLang" value="إنجليزي"> إنجليزي</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>بيانات الغلاف</legend>
+            <div class="grid-2">
+              <label>اسم الطالب / الطلاب
+                <input type="text" id="resStudent" placeholder="الاسم أو أسماء المجموعة">
+              </label>
+              <label>الجامعة / المدرسة والكلية
+                <input type="text" id="resUniversity" placeholder="مثلاً: كلية العلوم - جامعة دمياط">
+              </label>
+              <label>المادة
+                <input type="text" id="resSubject" placeholder="اسم المادة">
+              </label>
+              <label>اسم الدكتور / المشرف
+                <input type="text" id="resSupervisor" placeholder="د. ...">
+              </label>
+              <label>الفرقة / السنة الدراسية
+                <input type="text" id="resYear" placeholder="مثلاً: الفرقة الثالثة">
+              </label>
+              <label>رقم الجلوس / الكود (لو مطلوب)
+                <input type="text" id="resId" placeholder="اختياري">
+              </label>
+            </div>
+            <label>أي حاجة تانية تتكتب على الغلاف
+              <textarea id="resCoverExtra" rows="2" placeholder="مثلاً: لوجو الجامعة، العام الدراسي..."></textarea>
+            </label>
+          </fieldset>
+        </div>
 
         <label>تفاصيل إضافية
-          <textarea id="details" rows="4" placeholder="اكتب أي تفاصيل أو موعد التسليم المطلوب"></textarea>
+          <textarea id="details" rows="4" placeholder="أي تفاصيل تانية: موعد التسليم، نقاط معينة عايزها، طريقة التنسيق، المراجع..."></textarea>
         </label>
 
         <button type="submit" class="btn btn-block btn-whatsapp">إرسال الطلب على واتساب</button>

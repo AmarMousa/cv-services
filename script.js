@@ -3,10 +3,12 @@ const WHATSAPP_NUMBER = "201067103305";
 
 const serviceSelect = document.getElementById("service");
 const formatField = document.getElementById("formatField");
-const pagesField = document.getElementById("pagesField");
 const cvFields = document.getElementById("cvFields");
+const presFields = document.getElementById("presFields");
+const researchFields = document.getElementById("researchFields");
 
 const val = (id) => document.getElementById(id).value.trim();
+const radio = (name) => document.querySelector(`input[name="${name}"]:checked`).value;
 
 // إظهار الحقول المناسبة حسب الخدمة
 function updateFields() {
@@ -14,7 +16,8 @@ function updateFields() {
   const isCV = value.startsWith("CV");
   formatField.hidden = !isCV;
   cvFields.hidden = !isCV;
-  pagesField.hidden = value !== "بحث";
+  presFields.hidden = value !== "بريزنتيشن";
+  researchFields.hidden = value !== "بحث";
 }
 serviceSelect.addEventListener("change", updateFields);
 updateFields();
@@ -95,30 +98,61 @@ function cvMessage() {
   return text;
 }
 
-// التأكد من الخانات المطلوبة في بيانات الـ CV
-function validateCV() {
+function presMessage() {
+  const line = (label, v) => (v ? `\n${label}: ${v}` : "");
+  let text = "\n\n━━━ بيانات البريزنتيشن ━━━";
+  text += line("الموضوع", val("presTopic"));
+  text += line("اللغة", radio("presLang"));
+  text += line("عدد الشرائح", val("presSlides"));
+  text += line("هيتعرض في", val("presFor"));
+  text += section("بيانات أول سلايد", val("presCover"));
+  return text;
+}
+
+function researchMessage() {
+  const line = (label, v) => (v ? `\n${label}: ${v}` : "");
+  let text = "\n\n━━━ بيانات البحث ━━━";
+  text += line("الموضوع", val("resTopic"));
+  text += line("عدد الصفحات", val("pages"));
+  text += line("اللغة", radio("resLang"));
+
+  const cover = [
+    line("اسم الطالب", val("resStudent")),
+    line("الجامعة/الكلية", val("resUniversity")),
+    line("المادة", val("resSubject")),
+    line("الدكتور/المشرف", val("resSupervisor")),
+    line("الفرقة", val("resYear")),
+    line("رقم الجلوس/الكود", val("resId")),
+    line("إضافات", val("resCoverExtra")),
+  ].join("").trim();
+  text += section("بيانات الغلاف", cover);
+  return text;
+}
+
+// التأكد من الخانات المطلوبة في القسم الظاهر
+function validateSection(container) {
   let firstInvalid = null;
-  cvFields.querySelectorAll("[data-required]").forEach((input) => {
+  container.querySelectorAll("[data-required]").forEach((input) => {
     const empty = !input.value.trim();
     input.classList.toggle("invalid", empty);
     if (empty && !firstInvalid) firstInvalid = input;
   });
   if (firstInvalid) {
     firstInvalid.focus();
-    alert("من فضلك املا الخانات المطلوبة في بيانات الـ CV");
+    alert("من فضلك املا الخانات المطلوبة (اللي عليها *)");
     return false;
   }
   return true;
 }
 
-cvFields.addEventListener("input", (e) => e.target.classList.remove("invalid"));
+document.getElementById("orderForm").addEventListener("input", (e) => e.target.classList.remove("invalid"));
 
 // إرسال الطلب على واتساب
 document.getElementById("orderForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const isCV = !cvFields.hidden;
-  if (isCV && !validateCV()) return;
+  const activeSection = [cvFields, presFields, researchFields].find((s) => !s.hidden);
+  if (activeSection && !validateSection(activeSection)) return;
 
   const name = val("name");
   const service = serviceSelect.value;
@@ -130,12 +164,10 @@ document.getElementById("orderForm").addEventListener("submit", (e) => {
     const formats = [...formatField.querySelectorAll("input:checked")].map((c) => c.value);
     if (formats.length) message += `\nصيغة التسليم: ${formats.join(" + ")}`;
   }
-  if (!pagesField.hidden) {
-    const pages = val("pages");
-    if (pages) message += `\nعدد الصفحات: ${pages}`;
-  }
-  if (details) message += `\nتفاصيل: ${details}`;
-  if (isCV) message += cvMessage();
+  if (activeSection === cvFields) message += cvMessage();
+  if (activeSection === presFields) message += presMessage();
+  if (activeSection === researchFields) message += researchMessage();
+  if (details) message += `\n\n*تفاصيل إضافية:*\n${details}`;
 
   window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, "_blank");
 });

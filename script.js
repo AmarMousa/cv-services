@@ -116,16 +116,7 @@ function researchMessage() {
   text += line("عدد الصفحات", val("pages"));
   text += line("اللغة", radio("resLang"));
 
-  const cover = [
-    line("اسم الطالب", val("resStudent")),
-    line("الجامعة/الكلية", val("resUniversity")),
-    line("المادة", val("resSubject")),
-    line("الدكتور/المشرف", val("resSupervisor")),
-    line("الفرقة", val("resYear")),
-    line("رقم الجلوس/الكود", val("resId")),
-    line("إضافات", val("resCoverExtra")),
-  ].join("").trim();
-  text += section("بيانات الغلاف", cover);
+  text += section("بيانات الغلاف", `الاسم: ${val("resStudent")}\nالموضوع: ${val("resTopic")}`);
   return text;
 }
 

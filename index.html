@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
 
@@ -331,28 +331,9 @@
           </fieldset>
           <fieldset>
             <legend>بيانات الغلاف</legend>
-            <div class="grid-2">
-              <label>اسم الطالب / الطلاب
-                <input type="text" id="resStudent" placeholder="الاسم أو أسماء المجموعة">
-              </label>
-              <label>الجامعة / المدرسة والكلية
-                <input type="text" id="resUniversity" placeholder="مثلاً: كلية العلوم - جامعة دمياط">
-              </label>
-              <label>المادة
-                <input type="text" id="resSubject" placeholder="اسم المادة">
-              </label>
-              <label>اسم الدكتور / المشرف
-                <input type="text" id="resSupervisor" placeholder="د. ...">
-              </label>
-              <label>الفرقة / السنة الدراسية
-                <input type="text" id="resYear" placeholder="مثلاً: الفرقة الثالثة">
-              </label>
-              <label>رقم الجلوس / الكود (لو مطلوب)
-                <input type="text" id="resId" placeholder="اختياري">
-              </label>
-            </div>
-            <label>أي حاجة تانية تتكتب على الغلاف
-              <textarea id="resCoverExtra" rows="2" placeholder="مثلاً: لوجو الجامعة، العام الدراسي..."></textarea>
+            <p class="cv-hint">الغلاف هيبقى عليه اسمك وموضوع البحث. لو عايز تضيف حاجة تانية (الجامعة، المادة، اسم الدكتور...) اكتبها في "تفاصيل إضافية" تحت.</p>
+            <label>الاسم اللي يتكتب على الغلاف *
+              <input type="text" id="resStudent" data-required placeholder="اسمك أو أسماء المجموعة">
             </label>
           </fieldset>
         </div>
@@ -397,6 +378,6 @@
 
   <a href="#order" class="float-wa" aria-label="اطلب على واتساب">💬</a>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

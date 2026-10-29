@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدماتي | CV وبريزنتيشن وأبحاث</title>
+  <meta name="description" content="عمل CV احترافي، بريزنتيشن، أبحاث، وحل مسائل بأسعار مناسبة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">خدماتي<span>.</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+      <nav class="links" id="navLinks">
+        <a href="#services">الخدمات</a>
+        <a href="#steps">إزاي تطلب</a>
+        <a href="#faq">أسئلة شائعة</a>
+        <a href="#order" class="btn btn-sm">اطلب الآن</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">شغل احترافي • تسليم سريع</span>
+        <h1>خلّي شغلك يبان <span class="highlight">باحترافية</span></h1>
+        <p>بعمل CV احترافي بالعربي والإنجليزي، بريزنتيشن مميز، أبحاث منظمة، وحل مسائل بطريقة واضحة — كل ده بأسعار مناسبة.</p>
+        <div class="hero-actions">
+          <a href="#order" class="btn">اطلب خدمتك</a>
+          <a href="#services" class="btn btn-outline">شوف الأسعار</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="mini-doc">
+          <div class="line w60"></div>
+          <div class="line w40"></div>
+          <div class="line"></div>
+          <div class="line w80"></div>
+          <div class="line w70"></div>
+          <div class="formats">
+            <span>PDF</span><span>Word</span><span>PowerPoint</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <h2 class="section-title">الخدمات والأسعار</h2>
+      <p class="section-sub">اختار الخدمة اللي محتاجها</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">📄</div>
+          <h3>CV إنجليزي احترافي</h3>
+          <div class="price">200 <small>جنيه</small></div>
+          <ul>
+            <li>تصميم احترافي ومنظم</li>
+            <li>متوافق مع أنظمة ATS</li>
+            <li>تسليم PDF أو Word أو PowerPoint حسب طلبك</li>
+          </ul>
+          <a href="#order" class="btn btn-block" data-service="CV إنجليزي">اطلب الآن</a>
+        </article>
+
+        <article class="card featured">
+          <span class="tag">الأكثر طلبًا</span>
+          <div class="icon">🌍</div>
+          <h3>CV عربي + إنجليزي</h3>
+          <div class="price">300 <small>جنيه</small></div>
+          <ul>
+            <li>نسختين كاملتين عربي وإنجليزي</li>
+            <li>صياغة احترافية للخبرات والمهارات</li>
+            <li>تسليم PDF أو Word أو PowerPoint حسب طلبك</li>
+          </ul>
+          <a href="#order" class="btn btn-block" data-service="CV عربي + إنجليزي">اطلب الآن</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3>بريزنتيشن احترافي</h3>
+          <div class="price">200 <small>جنيه</small></div>
+          <ul>
+            <li>تصميم جذاب ومنسق</li>
+            <li>محتوى منظم وسهل العرض</li>
+            <li>مناسب للجامعة والشغل</li>
+          </ul>
+          <a href="#order" class="btn btn-block" data-service="بريزنتيشن">اطلب الآن</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">📚</div>
+          <h3>بحث احترافي</h3>
+          <div class="price price-text">حسب عدد الصفحات</div>
+          <ul>
+            <li>بحث منظم بمقدمة وخاتمة ومراجع</li>
+            <li>تنسيق احترافي</li>
+            <li>السعر بيتحدد حسب عدد الورق</li>
+          </ul>
+          <a href="#order" class="btn btn-block" data-service="بحث">اطلب سعر</a>
+        </article>
+
+        <article class="card">
+          <div class="icon">🧮</div>
+          <h3>حل المسائل</h3>
+          <div class="price">500 <small>جنيه / شهريًا</small></div>
+          <ul>
+            <li>حل بطريقة احترافية وواضحة</li>
+            <li>شرح الخطوات</li>
+            <li>اشتراك شهري</li>
+          </ul>
+          <a href="#order" class="btn btn-block" data-service="حل المسائل (اشتراك شهري)">اشترك الآن</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps -->
+  <section class="section alt" id="steps">
+    <div class="container">
+      <h2 class="section-title">إزاي تطلب؟</h2>
+      <div class="steps">
+        <div class="step"><span>1</span><h4>اختار الخدمة</h4><p>حدد الخدمة اللي محتاجها من القائمة.</p></div>
+        <div class="step"><span>2</span><h4>ابعت بياناتك</h4><p>املا الفورم وهيتبعت لي على واتساب مباشرة.</p></div>
+        <div class="step"><span>3</span><h4>استلم شغلك</h4><p>بستلمك الشغل بالصيغة اللي طلبتها.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order form -->
+  <section class="section" id="order">
+    <div class="container narrow">
+      <h2 class="section-title">اطلب خدمتك</h2>
+      <p class="section-sub">املا البيانات وهيتفتح واتساب برسالة جاهزة</p>
+
+      <form class="form" id="orderForm">
+        <label>الاسم
+          <input type="text" id="name" required placeholder="اسمك">
+        </label>
+
+        <label>الخدمة
+          <select id="service" required>
+            <option value="CV إنجليزي">CV إنجليزي — 200 جنيه</option>
+            <option value="CV عربي + إنجليزي">CV عربي + إنجليزي — 300 جنيه</option>
+            <option value="بريزنتيشن">بريزنتيشن — 200 جنيه</option>
+            <option value="بحث">بحث — حسب عدد الصفحات</option>
+            <option value="حل المسائل (اشتراك شهري)">حل المسائل — 500 جنيه شهريًا</option>
+          </select>
+        </label>
+
+        <div class="field" id="formatField">
+          <span class="field-label">صيغة التسليم</span>
+          <div class="checks">
+            <label><input type="checkbox" value="PDF" checked> PDF</label>
+            <label><input type="checkbox" value="Word"> Word</label>
+            <label><input type="checkbox" value="PowerPoint"> PowerPoint</label>
+          </div>
+        </div>
+
+        <!-- بيانات الـ CV -->
+        <div class="cv-data" id="cvFields">
+          <h3 class="cv-title">بيانات الـ CV</h3>
+          <p class="cv-hint">اكتب بياناتك بالعربي أو الإنجليزي، وأنا هصيغها باحترافية. الخانات اللي عليها * مطلوبة.</p>
+
+          <fieldset>
+            <legend>البيانات الشخصية</legend>
+            <div class="grid-2">
+              <label>الاسم *
+                <input type="text" id="cvFullName" data-required placeholder="الاسم الثنائي يكفي (مثلاً: ياسمين هاني)">
+              </label>
+              <label>المسمى الوظيفي *
+                <input type="text" id="cvJobTitle" data-required placeholder="مثلاً: محاسب، مهندس، كيميائي">
+              </label>
+              <label>رقم الموبايل *
+                <input type="tel" id="cvPhone" data-required placeholder="01xxxxxxxxx">
+              </label>
+              <label>الإيميل *
+                <input type="email" id="cvEmail" data-required placeholder="name@example.com">
+              </label>
+              <label>العنوان (المحافظة - المدينة)
+                <input type="text" id="cvAddress" placeholder="مثلاً: دمياط - كفر البطيخ">
+              </label>
+              <label>لينك LinkedIn (اختياري)
+                <input type="text" id="cvLinkedin" placeholder="linkedin.com/in/...">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>نبذة عنك</legend>
+            <label>الهدف الوظيفي / نبذة مختصرة
+              <textarea id="cvSummary" rows="3" placeholder="اكتب عن نفسك وخبرتك والوظيفة اللي بتدور عليها"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>التعليم</legend>
+            <div class="grid-2">
+              <label>المؤهل / الدرجة *
+                <input type="text" id="cvDegree" data-required placeholder="مثلاً: بكالوريوس علوم">
+              </label>
+              <label>التخصص
+                <input type="text" id="cvMajor" placeholder="مثلاً: كيمياء خاصة">
+              </label>
+              <label>الكلية والجامعة *
+                <input type="text" id="cvUniversity" data-required placeholder="مثلاً: كلية العلوم - جامعة دمياط">
+              </label>
+              <label>سنة البداية - سنة التخرج
+                <input type="text" id="cvEduYears" placeholder="مثلاً: 2022 - 2026">
+              </label>
+              <label>التقدير / النسبة
+                <input type="text" id="cvGrade" placeholder="مثلاً: جيد جدًا (81.46%)">
+              </label>
+              <label>المعدل التراكمي GPA (لو موجود)
+                <input type="text" id="cvGpa" placeholder="مثلاً: 3.22 / 4.00">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>الخبرات العملية</legend>
+            <div class="repeat-list" id="experienceList"></div>
+            <button type="button" class="btn btn-outline btn-sm add-btn" data-add="experience">+ إضافة خبرة</button>
+          </fieldset>
+
+          <fieldset>
+            <legend>التدريبات (Internships)</legend>
+            <div class="repeat-list" id="internshipList"></div>
+            <button type="button" class="btn btn-outline btn-sm add-btn" data-add="internship">+ إضافة تدريب</button>
+          </fieldset>
+
+          <fieldset>
+            <legend>المشاريع (اختياري)</legend>
+            <label>مشروع التخرج أو أي مشاريع/أبحاث (كل مشروع في سطر مع وصف مختصر)
+              <textarea id="cvProjects" rows="3" placeholder="اسم المشروع - وصف مختصر للي عملته فيه"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>المهارات والكورسات واللغات</legend>
+            <label>المهارات (كل مهارة في سطر)
+              <textarea id="cvSkills" rows="4" placeholder="Quality Control&#10;MS Excel, Word & PowerPoint&#10;Communication & Teamwork"></textarea>
+            </label>
+            <label>الكورسات والشهادات (كل كورس في سطر)
+              <textarea id="cvCourses" rows="3" placeholder="اسم الكورس - الجهة - التاريخ"></textarea>
+            </label>
+            <label>اللغات ومستواها
+              <textarea id="cvLanguages" rows="2" placeholder="العربية: اللغة الأم&#10;الإنجليزية: جيد"></textarea>
+            </label>
+          </fieldset>
+        </div>
+
+        <template id="entryTemplate">
+          <div class="entry">
+            <button type="button" class="remove-btn" aria-label="حذف">✕</button>
+            <div class="grid-2">
+              <label><span class="entry-role">المسمى الوظيفي</span>
+                <input type="text" class="e-role">
+              </label>
+              <label>اسم الشركة / الجهة
+                <input type="text" class="e-company">
+              </label>
+              <label>من - إلى
+                <input type="text" class="e-period" placeholder="مثلاً: يوليو 2024 - أغسطس 2024">
+              </label>
+            </div>
+            <label>المهام والإنجازات
+              <textarea class="e-desc" rows="2" placeholder="اكتب باختصار اللي كنت بتعمله"></textarea>
+            </label>
+          </div>
+        </template>
+
+        <label id="pagesField" hidden>عدد الصفحات
+          <input type="number" id="pages" min="1" placeholder="مثلاً 10">
+        </label>
+
+        <label>تفاصيل إضافية
+          <textarea id="details" rows="4" placeholder="اكتب أي تفاصيل أو موعد التسليم المطلوب"></textarea>
+        </label>
+
+        <button type="submit" class="btn btn-block btn-whatsapp">إرسال الطلب على واتساب</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section alt" id="faq">
+    <div class="container narrow">
+      <h2 class="section-title">أسئلة شائعة</h2>
+      <details>
+        <summary>الـ CV بيتسلم بأي صيغة؟</summary>
+        <p>حسب طلبك: PDF أو Word أو PowerPoint، أو أكتر من صيغة.</p>
+      </details>
+      <details>
+        <summary>سعر البحث كام؟</summary>
+        <p>السعر بيتحدد حسب عدد الصفحات المطلوبة. ابعت عدد الصفحات في الفورم وهرد عليك بالسعر.</p>
+      </details>
+      <details>
+        <summary>اشتراك حل المسائل بيشمل إيه؟</summary>
+        <p>حل المسائل بطريقة احترافية وواضحة طول الشهر مقابل 500 جنيه.</p>
+      </details>
+      <details>
+        <summary>الدفع بيكون إزاي؟</summary>
+        <p>بنتفق على طريقة الدفع على واتساب بعد تأكيد الطلب.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> خدماتي — كل الحقوق محفوظة</p>
+    </div>
+  </footer>
+
+  <a href="#order" class="float-wa" aria-label="اطلب على واتساب">💬</a>
+
+  <script src="script.js"></script>
+</body>
+</html>

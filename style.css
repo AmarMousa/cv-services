@@ -192,6 +192,9 @@ details p { color: var(--muted); margin-top: 10px; }
 
 /* Footer */
 .footer { background: #111827; color: #9ca3af; text-align: center; padding: 24px 0; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+.footer-links a { color: #e5e7eb; font-weight: 700; }
+.footer-links a:hover { color: var(--accent); }
 
 /* Floating button */
 .float-wa {
